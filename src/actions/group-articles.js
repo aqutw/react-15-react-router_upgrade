@@ -114,6 +114,9 @@ function getNextUrl(state = {}, groupType, groupNames = [], count = 10, page = 1
     if (id) {
       groupIds.push(id)
     }
+    if (groupName=='評論' && !id) {
+      groupIds.push('576b59025ba976100063cf4e')
+    } 
   })
   return buildQueryURL(groupType, groupIds, count, page)
 }
