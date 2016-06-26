@@ -28,6 +28,7 @@ class App extends Component {
         <div>
           <NavBar
             bgStyle={pathname === '/photography' ? 'dark' : 'light'}
+            location={this.props.location}
             path={pathname}/>
           {this.props.children}
         </div>
