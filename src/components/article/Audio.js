@@ -11,7 +11,8 @@ import React from 'react' // eslint-disable-line
 import Slider from 'rc-slider'
 
 if (process.env.BROWSER) {
-  require('rc-slider/assets/index.css')
+  // require('rc-slider/assets/index.css')
+  require('./rcslider.css')
   require('./rcslider-overwrite.css')
 }
 
