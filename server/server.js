@@ -8,7 +8,7 @@ import path from 'path'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import createLocation from 'history/lib/createLocation'
-import { RoutingContext, match } from 'react-router'
+import { RouterContext, match } from 'react-router'
 import createMemoryHistory from 'history/lib/createMemoryHistory'
 import Promise from 'bluebird'
 import httpProxy from 'http-proxy'
@@ -118,7 +118,7 @@ server.get('*', (req, res) => {
         let reduxState = escape(JSON.stringify(store.getState()))
         let html = ReactDOMServer.renderToString(
           <Provider store={store} >
-            { <RoutingContext {...renderProps} /> }
+            { <RouterContext {...renderProps} /> }
           </Provider>
         )
         let assets = webpackIsomorphicTools.assets()
